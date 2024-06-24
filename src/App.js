@@ -5,6 +5,7 @@ import Header from './components/Header';
 import headerImg from "./img/header-img.png";
 import Button from './components/Button';
 import { AiFillAlert  } from "react-icons/ai";
+import UseStateHookEx from './Examples/UseStateHookEx';
 function App() {
   return (
     <div className="App">
@@ -23,6 +24,7 @@ function App() {
           </div>
           <img src={headerImg} alt="header-img" className="header-img"/>
      </Header>
+     <UseStateHookEx/>
     </div>
   );
 }
