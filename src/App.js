@@ -10,9 +10,13 @@ import Button from './components/Button';
 import Modal from './components/Modal';
 import Card from './components/Card';
 //icons
-import { AiFillHtml5  } from "react-icons/ai";
+import { AiFillHtml5, AiFillPlayCircle } from "react-icons/ai";
+import { DiCss3Full } from "react-icons/di";
+import { SiJavascript } from 'react-icons/si';
 //examples  
 import UseStateHookEx from './Examples/UseStateHookEx';
+import CategoriesCard from './components/page-components/CategoriesCard';
+import MyList from './Examples/MyList';
 
 function App() {
   
@@ -56,11 +60,33 @@ function App() {
       <section className='categories my-4'>
         <Title text='Top categories' classes={"subtitle text-center"}/>
         <div className='categories-container d-flex'>
-          <Card icon_1={<AiFillHtml5 size = {40}/>}></Card>
+          <CategoriesCard 
+          title={"Web Development"}
+           icon_1={<AiFillHtml5 size = {"4em"} className="fa-brands fa-html5"/>}
+           icon_2={<DiCss3Full size = {"4em"} className="icon css3"/>}
+           icon_3={<SiJavascript size = {"4em"} className="icon js"/>}
+           btnIcon={<AiFillPlayCircle size={"2em"}/>}
+           startLearningEvent={handelStartLearningEvent}>
+            <span className='fs-lg'>
+              Learn how to biuld web apps with :
+            </span>
+            <ul className='mt-1'>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Javascript</li>
+            </ul>
+            </CategoriesCard>
+            <CategoriesCard/>
+            <CategoriesCard/>
+            <CategoriesCard/>
         </div>
       </section>
+      
      </main>
      {/* <UseStateHookEx/> */}
+     {
+      // <MyList style={{height: "100vh"}}/>
+     }
     </div>
     </>
    

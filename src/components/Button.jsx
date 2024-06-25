@@ -5,7 +5,7 @@ export default function Button({classes,text,type,style,onClick,icon}) {
   return (
    <button onClick={onClick?onClick:alertMissingHundler} type = {type} className={`btn ${classes}`} style={style}>
    
-   <div className='d-lex'>
+   <div className='d-flex'>
     {icon}
     {text ? text : "Click"}
    </div>
